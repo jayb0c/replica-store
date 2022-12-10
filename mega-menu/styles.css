@@ -3,6 +3,12 @@ body{
   padding: 0;
   min-height: 1200px;
   background-color: white;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h3{
+  margin: 0;
+  font-size: 24px;
 }
 .logo{
   font-size: 40px;
@@ -17,10 +23,11 @@ body{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   justify-content: space-between;
-  padding: 0 30px;
+  padding: 0 40px;
   align-items: center;
   position: sticky;
   top: 0px;
+  height: 80px;
 }
 .nav-logo-container{
   display: flex;
@@ -38,16 +45,64 @@ body{
   list-style: none;
   font-size: 20px;
   font-weight: 800;
-  line-height: 1.2em;
+  line-height: 1.3em;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: black;
 }
 .nav-links > li{
-  padding-right: 5px;
+  padding: 0 5px;
+}
+
+/*IMAGE BANNER SECTION*/
+.image-banner-section {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  height: calc(100vh - 80px);
+}
+.image-banner-section .image-block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  flex-direction: column;
+  background-image: url('./images/pexels-malik-skydsgaard-12132215.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.image-banner-section .copy-block-container{
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.copy-block-container .copy-block{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 60%;
+  flex-direction: column;
 }
 .section{
   background-color: gainsboro;
   border-bottom: 5px solid black;
   height: 250px;
   width: 100%;
+}
+
+.button{
+  width: 100%;
+  height: 35px;
+  font-size: 20px;
+  border: none;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 10px;
+}
+.button:hover{
+  background-color: darkslategrey;
+  color: white;
+  cursor: pointer;
 }
