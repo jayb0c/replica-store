@@ -1,6 +1,6 @@
+//Mega menu functionality. Only links open it and when the mega menu is hovered it remains open.
 var megaMenu = document.getElementById('mega');
 var links = document.getElementById('nav');
-
 links.addEventListener('mouseover', function(event){
   if (event.target.className === 'link') {
     megaMenu.style.display = 'flex';
@@ -26,9 +26,9 @@ mega.addEventListener('mouseover', function (event) {
   megaMenu.style.transitionDelay = '2s';
 })
 
+//Carousel events. Finds the page width to ensure that the carousel never overscrolls.
 var main = document.getElementById('test');
 var currentScroll = 300;
-
 document.addEventListener('click', function(event){
   let page = main.offsetWidth;
     if (event.target.className === 'bookend-r') {
@@ -47,4 +47,20 @@ document.addEventListener('click', function(event){
         behavior: 'smooth'
       });
     }
+})
+
+//Logo toggles between the 2 store colors on each hover.
+var logo = document.getElementById('logo');
+var logoToggle = false;
+logo.addEventListener('mouseover', function(event){
+  if(!logoToggle){
+    logo.style.color = 'darkslategrey';
+    logoToggle = true;
+  }else if (logoToggle) {
+    logo.style.color = '#9C6F6B';
+    logoToggle = false;
+  }
+})
+logo.addEventListener('mouseout', function (event) {
+  logo.style.color = 'black';
 })
