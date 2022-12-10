@@ -246,6 +246,13 @@ h4{
   justify-content: center;
   align-items: center;
 }
+.mega-link{
+  text-decoration: none;
+  color: inherit;
+}
+.mega-link:hover{
+  cursor: pointer;
+}
 .mega-menu .menu-copy{
   display: flex;
   justify-content: center;
