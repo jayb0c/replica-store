@@ -27,6 +27,7 @@ h4{
 }
 .logo:hover{
   cursor: pointer;
+  color:darkslategrey;
 }
 .nav-bar{
   background-color: white;
@@ -77,8 +78,23 @@ h4{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin-top: 10px;
 }
-.button:hover {
+.button2{
+  width: 100%;
+  height: 35px;
+  font-size: 20px;
+  border: none;
   background-color: darkslategrey;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 10px;
+}
+.button:hover {
+  background-color: #9C6F6B;
+  color: white;
+  cursor: pointer;
+}
+.button2:hover {
+  background-color: #9C6F6B;
   color: white;
   cursor: pointer;
 }
@@ -199,11 +215,68 @@ h4{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   width: 100%;
   height: 450px;
-  padding: 20px 40px;
+  min-height: 450px;
+  padding: 40px 0px;
   position: fixed;
   top: 80px;
   z-index: 2;
-  display: none;
-  opacity: 1;
-  transition-delay: 5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mega-menu .menu-copy{
+  display: flex;
+  justify-content: center;
+  height: 80%;
+  width: 40%;
+  line-height: 3em;
+  flex-flow: column wrap;
+}
+.mega-menu .menu-images{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+}
+.mega-menu .menu-images .featured-image1{
+  display: flex;
+  align-items: flex-end;
+  width: 40%;
+  height: 75%;
+  background-image: url('./images/pexels-daria-liudnaya-8166972.jpg');
+  background-position: center;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.mega-menu .menu-images .featured-image2{
+  display: flex;
+  align-items: flex-end;
+  width: 40%;
+  height: 75%;
+  background-image: url('./images/pexels-daria-liudnaya-8166570.jpg');
+  background-position: center;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.mega-menu .menu-images .featured-image1 .overlay{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #9C6F6B;
+  color: white;
+  align-items: center;
+  height: 50px;
+}
+.mega-menu .menu-images .featured-image2 .overlay{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: darkslategray;
+  color: white;
+  align-items: center;
+  height: 50px;
+}
+.mega-menu .menu-images:hover{
+  cursor: pointer;
 }
