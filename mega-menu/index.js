@@ -25,3 +25,26 @@ mega.addEventListener('mouseover', function (event) {
   megaMenu.style.opacity = '1';
   megaMenu.style.transitionDelay = '2s';
 })
+
+var main = document.getElementById('test');
+var currentScroll = 300;
+
+document.addEventListener('click', function(event){
+  let page = main.offsetWidth;
+    if (event.target.className === 'bookend-r') {
+      event.target.previousElementSibling.scrollTo({
+        top: 0,
+        left: currentScroll,
+        behavior: 'smooth'
+      });
+      if(currentScroll < page + 300){currentScroll += 300};
+    } else if (event.target.className === 'bookend-l') {
+      let page = main.offsetWidth;
+      currentScroll = 300;
+      event.target.nextElementSibling.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+})

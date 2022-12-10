@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 body{
   overflow: auto;
   height: 100%;
@@ -149,7 +152,13 @@ h4{
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.featured-collection-section .bookend {
+.bookend-r {
+  background-color: white;
+  height: 100%;
+  width: 40px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.bookend-l {
   background-color: white;
   height: 100%;
   width: 40px;
@@ -158,11 +167,18 @@ h4{
 
 .featured-collection-section .middle{
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   width: calc(100% - 40px);
   height: 100%;
-  overflow-x: hidden;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+  scrollbar-width: none;
+}
+.featured-collection-section .middle::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
 }
 .featured-collection-section .slide{
   display: flex;
