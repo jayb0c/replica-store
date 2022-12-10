@@ -1,22 +1,28 @@
 body{
   margin: 0;
   padding: 0;
+  min-height: 1200px;
+  background-color: white;
 }
 .logo{
   font-size: 40px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 800;
-  color: white;
+  font-family: mundial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
   letter-spacing: 3px;
 }
 .nav-bar{
-  background-color: slategray;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 30px;
   align-items: center;
+  position: sticky;
+  top: 0px;
 }
-.nav-logo{
+.nav-logo-container{
   display: flex;
 }
 .nav-links-container {
@@ -34,8 +40,14 @@ body{
   font-weight: 800;
   line-height: 1.2em;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
+  color: black;
 }
 .nav-links > li{
-  padding-right: 4px;
+  padding-right: 5px;
+}
+.section{
+  background-color: gainsboro;
+  border-bottom: 5px solid black;
+  height: 250px;
+  width: 100%;
 }
