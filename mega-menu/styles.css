@@ -144,8 +144,8 @@ h4{
   display: flex;
   height: 400px;
   width: 100%;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -155,6 +155,7 @@ h4{
   width: 40px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
 .featured-collection-section .middle{
   display: flex;
   justify-content: center;
@@ -220,7 +221,7 @@ h4{
   position: fixed;
   top: 80px;
   z-index: 2;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
