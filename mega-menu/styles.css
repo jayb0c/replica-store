@@ -152,12 +152,18 @@ h4{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .bookend-r {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: white;
   height: 100%;
   width: 40px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .bookend-l {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: white;
   height: 100%;
   width: 40px;
@@ -295,4 +301,17 @@ h4{
 }
 .mega-menu .menu-images:hover{
   cursor: pointer;
+}
+.r-arrow{
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  user-select: none;
+}
+.l-arrow {
+  width: 40px;
+  height: 40px;
+  rotate: 180deg;
+  pointer-events: none;
+  user-select: none;
 }

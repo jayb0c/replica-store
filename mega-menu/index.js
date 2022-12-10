@@ -31,7 +31,8 @@ var main = document.getElementById('test');
 var currentScroll = 300;
 document.addEventListener('click', function(event){
   let page = main.scrollWidth;
-    if (event.target.className === 'bookend-r') {
+  console.log(event.target);
+  if (event.target.className === 'bookend-r'){
       event.target.previousElementSibling.scrollTo({
         top: 0,
         left: currentScroll,
