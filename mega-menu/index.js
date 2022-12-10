@@ -30,7 +30,7 @@ mega.addEventListener('mouseover', function (event) {
 var main = document.getElementById('test');
 var currentScroll = 300;
 document.addEventListener('click', function(event){
-  let page = main.offsetWidth;
+  let page = main.scrollWidth;
     if (event.target.className === 'bookend-r') {
       event.target.previousElementSibling.scrollTo({
         top: 0,
@@ -39,7 +39,7 @@ document.addEventListener('click', function(event){
       });
       if(currentScroll < page + 300){currentScroll += 300};
     } else if (event.target.className === 'bookend-l') {
-      let page = main.offsetWidth;
+      let page = main.scrollWidth;
       currentScroll = 300;
       event.target.nextElementSibling.scrollTo({
         top: 0,
