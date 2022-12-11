@@ -51,22 +51,19 @@ document.addEventListener('click', function(event){
 })
 
 //Logo toggles between the 2 store colors on each hover.
+/*
 var logo = document.getElementById('logo');
 var logoToggle = false;
 logo.addEventListener('mouseover', function(event){
   if(!logoToggle){
-    logo.style.color = 'darkslategrey';
+    logo.style.color = '#4EBF8B';
     logoToggle = true;
   }else if (logoToggle) {
-    logo.style.color = '#9C6F6B';
+    logo.style.color = '#D95829';
     logoToggle = false;
   }
 })
 logo.addEventListener('mouseout', function (event) {
   logo.style.color = 'black';
 })
-
-document.addEventListener('mouseover', function(event){
-  if(event.target.className === 'slide'){
-  }
-})
+*/
