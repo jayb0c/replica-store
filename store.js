@@ -14,14 +14,16 @@ fetch('https://api.escuelajs.co/api/v1/products')
   .then(data => {
     obj = data;
   })
+  //The id number changes the entire category of products for the entire site!
   .then(() => {
     let newData = [];
     for (let y = 0; y < data.length; y++){
-      if (data[y].category.id === 1) {
+      if (data[y].category.id === 4) {
         newData.push(data[y]);
       }
     }
-    console.log('after', newData);
+
+//Basically, the API is called and the first carousel gets the first 10 and the second carousel gets the second 10. A new carousel tile is created for each item.
     for (let i = 0; i < 10; i++) {
       if (newData[i].images != '') {
       let prod = document.createElement('div');
