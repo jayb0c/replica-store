@@ -83,8 +83,8 @@ p{
   height: 45px;
   font-size: 20px;
   border: none;
-  color: white;
-  background-color: #4EBF8B;
+  color: black;
+  background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin-top: 10px;
 }
@@ -291,6 +291,7 @@ p{
 }
 .mega-link:hover{
   cursor: pointer;
+  color: darkgray;
 }
 .mega-menu .menu-copy{
   display: flex;
