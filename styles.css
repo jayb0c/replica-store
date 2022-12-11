@@ -12,8 +12,9 @@ body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 h2{
-  font-size: 26px;
-}
+   font-size: 26px;
+   letter-spacing: 0.02em;
+  }
 h3{
   margin: 0;
   font-size: 30px;
@@ -21,6 +22,9 @@ h3{
 h4{
   margin: 0;
   font-size: 22px;
+}
+p{
+  font-size: 16px;
 }
 .logo{
   font-size: 40px;
@@ -56,7 +60,7 @@ h4{
 .nav-links{
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
   list-style: none;
@@ -74,9 +78,9 @@ h4{
   color: #4EBF8B;
   cursor: pointer;
 }
-.button {
+.button{
   width: 100%;
-  height: 35px;
+  height: 45px;
   font-size: 20px;
   border: none;
   color: white;
@@ -86,13 +90,13 @@ h4{
 }
 .button2{
   width: 100%;
-  height: 35px;
+  height: 45px;
   font-size: 20px;
   border: none;
   background-color: black;
   color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .button:hover {
   background-color: #82D9B0;
@@ -139,9 +143,9 @@ h4{
 }
 .copy-block-container .copy-block{
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   width: 60%;
-  height: 60%;
+  height: 100%;
   flex-direction: column;
 }
 
@@ -254,9 +258,9 @@ h4{
 
 .copy-block-container .copy-block {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   width: 60%;
-  height: 60%;
+  height: 100%;
   flex-direction: column;
 }
 
@@ -265,8 +269,7 @@ h4{
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   width: 100%;
-  height: 450px;
-  min-height: 450px;
+  height: 50vh;
   padding: 40px 0px;
   position: fixed;
   top: 80px;
@@ -278,6 +281,13 @@ h4{
 .mega-link{
   text-decoration: none;
   color: inherit;
+  font-size: 16px;
+  font-weight: 300;
+}
+.mega-category{
+  text-decoration: none;
+  color: inherit;
+  font-size: 18px;
 }
 .mega-link:hover{
   cursor: pointer;
@@ -286,7 +296,7 @@ h4{
   display: flex;
   justify-content: center;
   height: 80%;
-  width: 40%;
+  width: 15%;
   line-height: 3em;
   flex-flow: column wrap;
 }
@@ -301,39 +311,36 @@ h4{
   display: flex;
   align-items: flex-end;
   width: 40%;
-  height: 75%;
-  background-image: url('./images/pexels-daria-liudnaya-8166972.jpg');
+  height: 80%;
+  background-image: url('./images/pexels-ray-piedra-1468412.jpg');
   background-position: center;
   background-size: cover;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
 }
 .mega-menu .menu-images .featured-image2{
   display: flex;
   align-items: flex-end;
   width: 40%;
-  height: 75%;
-  background-image: url('./images/pexels-daria-liudnaya-8166570.jpg');
+  height: 80%;
+  background-image: url('./images/pexels-ray-piedra-1464648.jpg');
   background-position: center;
   background-size: cover;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
 }
-.mega-menu .menu-images .featured-image1 .overlay{
+.overlay{
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: #9C6F6B;
+  background-color: rgba(0, 0, 0, 0.2);
   color: white;
   align-items: center;
-  height: 50px;
+  height: 100%;
+  border-radius: 5px;
 }
-.mega-menu .menu-images .featured-image2 .overlay{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background-color: darkslategray;
-  color: white;
-  align-items: center;
-  height: 50px;
+.overlay:hover{
+  background-color:rgba(0, 0, 0, 0.6) ;
 }
 .mega-menu .menu-images:hover{
   cursor: pointer;
