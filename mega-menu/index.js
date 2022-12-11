@@ -27,7 +27,7 @@ mega.addEventListener('mouseover', function (event) {
 })
 
 //Carousel events. Finds the page width to ensure that the carousel never overscrolls.
-var main = document.getElementById('test');
+var main = document.getElementById('collection1');
 var currentScroll = 300;
 document.addEventListener('click', function(event){
   let page = main.scrollWidth;
