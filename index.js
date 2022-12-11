@@ -4,26 +4,21 @@ var links = document.getElementById('nav');
 links.addEventListener('mouseover', function(event){
   if (event.target.className === 'link') {
     megaMenu.style.display = 'flex';
-    megaMenu.style.opacity = '1';
-    megaMenu.style.transitionDelay = '2s';
+    megaMenu.className = "mega-menu show";
   }
 })
 links.addEventListener('mouseover', function (event) {
   if (event.target.className === 'nav-links') {
-    megaMenu.style.display = 'none';
-    megaMenu.style.opacity = '1';
-    megaMenu.style.transitionDelay = '2s';
+    megaMenu.className = "mega-menu hide";
   }
 })
 mega.addEventListener('mouseout', function(event){
+  megaMenu.className = "mega-menu hide";
   megaMenu.style.display = 'none';
-  megaMenu.style.opacity = '1';
-  megaMenu.style.transitionDelay = '2s';
 })
 mega.addEventListener('mouseover', function (event) {
-    megaMenu.style.display = 'flex';
-  megaMenu.style.opacity = '1';
-  megaMenu.style.transitionDelay = '2s';
+  megaMenu.className = "mega-menu show";
+  megaMenu.style.display = 'flex';
 })
 
 //Carousel events. Finds the page width to ensure that the carousel never overscrolls.

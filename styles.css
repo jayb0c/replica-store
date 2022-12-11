@@ -57,7 +57,7 @@ p{
 }
 .nav-links-container {
   display: flex;
-  width: 50%;
+  width: 45%;
 }
 .nav-links{
   display: flex;
@@ -113,7 +113,7 @@ p{
 
 /*BLANK SECTION*/
 .section {
-  background-color: gainsboro;
+  background-color: white;
   border-bottom: 5px solid black;
   height: 250px;
   width: 100%;
@@ -146,9 +146,12 @@ p{
 .copy-block-container .copy-block{
   display: flex;
   justify-content: center;
-  width: 60%;
+  width: 80%;
   height: 100%;
   flex-direction: column;
+}
+.copy-header{
+  font-size: 70px;
 }
 
 /*FEATURED COLLECTION*/
@@ -276,20 +279,29 @@ p{
   position: fixed;
   top: 80px;
   z-index: 2;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+.show {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity 500ms;
 }
 .mega-link{
   text-decoration: none;
   color: inherit;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 300;
 }
 .mega-category{
   text-decoration: none;
   color: inherit;
-  font-size: 18px;
+  font-size: 24px;
 }
 .mega-link:hover{
   cursor: pointer;
@@ -360,4 +372,14 @@ p{
   rotate: 180deg;
   pointer-events: none;
   user-select: none;
+}
+
+.cart-icon{
+  height: 30px;
+  width: auto;
+}
+.cart-icon:hover {
+  height: 30px;
+  width: auto;
+  filter: invert(73%) sepia(7%) saturate(2765%) hue-rotate(100deg) brightness(90%) contrast(85%);
 }
