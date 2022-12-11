@@ -65,3 +65,8 @@ logo.addEventListener('mouseover', function(event){
 logo.addEventListener('mouseout', function (event) {
   logo.style.color = 'black';
 })
+
+document.addEventListener('mouseover', function(event){
+  if(event.target.className === 'slide'){
+  }
+})
