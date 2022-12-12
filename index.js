@@ -1,6 +1,11 @@
 //Mega menu functionality. Only links open it and when the mega menu is hovered it remains open.
 var megaMenu = document.getElementById('mega');
 var links = document.getElementById('nav');
+var cart = document.getElementById('cart');
+var cartIcon = document.getElementById('cartIcon');
+var cartX = document.getElementById('cartX');
+
+console.log(cart);
 links.addEventListener('mouseover', function(event){
   if (event.target.className === 'link') {
     megaMenu.style.display = 'flex';
@@ -19,6 +24,16 @@ mega.addEventListener('mouseout', function(event){
 mega.addEventListener('mouseover', function (event) {
   megaMenu.className = "mega-menu show";
   megaMenu.style.display = 'flex';
+})
+links.addEventListener('click', function (event) {
+  if (event.target === cartIcon) {
+    cart.style.display = 'flex';
+  }
+})
+cart.addEventListener('click', function (event){
+  if(event.target === cartX) {
+    cart.style.display = 'none';
+  }
 })
 
 //Carousel events. Finds the page width to ensure that the carousel never overscrolls.
