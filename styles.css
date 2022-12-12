@@ -41,6 +41,27 @@ p{
 .logo:hover{
   cursor: pointer;
 }
+footer{
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 320px;
+  padding: 40px 60px;
+}
+.footer-half1{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 40%;
+}
+.footer-half2{
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  width: 60%;
+}
 .nav-bar{
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -308,6 +329,14 @@ p{
   cursor: pointer;
   color: darkgray;
 }
+.menu-copy {
+  display: flex;
+  justify-content: center;
+  height: 80%;
+  width: 50%;
+  line-height: 3em;
+  flex-flow: column wrap;
+}
 .mega-menu .menu-copy{
   display: flex;
   justify-content: center;
@@ -418,7 +447,7 @@ p{
   width: 100%;
   height: 80%;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 .see-it-tile{
@@ -429,6 +458,14 @@ p{
   height: 250px;
   border-radius: 30px;
   align-items: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  user-select: none;
+}
+.see-it-tile:hover {
+  cursor: pointer;
 }
 .insta{
   display: flex;
@@ -465,4 +502,67 @@ p{
       font-size: 56px;
         letter-spacing: 0.02em;
         margin-left: 33px;
+}
+.showspan{
+  display: flex;
+  font-size: 55px;
+  color: white;
+  font-weight: 800;
+}
+.reviews-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+  padding: 80px 0;
+}
+.review{
+  display: flex;
+  background-color: black;
+  width: 40%;
+  height: 100%;
+}
+.email-box{
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  width: 80%;
+}
+.email{
+  width: 90%;
+  height: 26px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  background-color: gainsboro;
+}
+.email-label{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.logo2 {
+  font-size: 40px;
+  font-family: mundial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+  letter-spacing: 3px;
+  user-select: none;
+  margin-top: 0;
+}
+
+.logo2:hover {
+  cursor: pointer;
+}
+.footer-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+.footer-link:hover {
+  cursor: pointer;
+  color: darkgray;
 }
