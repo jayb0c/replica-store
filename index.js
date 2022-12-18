@@ -71,6 +71,7 @@ function scrollCarousel (carousel, num){
         });
         if (rightSet <= middles.scrollWidth) { addON = rightSet; };
       }
+      /*
       if (event.target.className === 'bookend-l') {
         if (addON == 0) {
           middles.classList.add('wrap2');
@@ -87,6 +88,7 @@ function scrollCarousel (carousel, num){
           addON = 0;
         }
       }
+      */
     }
   });
 }
