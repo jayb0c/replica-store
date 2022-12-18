@@ -356,7 +356,7 @@ footer{
   align-items: center;
   height: 100%;
   width: 50%;
-  animation: fadeInAnimation ease 2s;
+  animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -637,6 +637,13 @@ footer{
 }
 footer{
   margin-top: 80px;
+}
+.button, .button2{
+  height: 60px;
+}
+.email{
+  width: 100%;
+  height: 35px;
 }
 }
 
