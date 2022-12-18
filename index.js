@@ -5,25 +5,27 @@ var cart = document.getElementById('cart');
 var cartIcon = document.getElementById('cartIcon');
 var cartX = document.getElementById('cartX');
 
+if (window.scrollY > (megaMenu.offsetHeight + megaMenu.offsetTop)) {
+  megaMenu.className = "mega-menu hide";
+}
 links.addEventListener('mouseover', function(event){
-  if (event.target.className === 'link') {
+  if (event.target.className === 'link' || event.target === megaMenu) {
     megaMenu.style.display = 'flex';
     megaMenu.className = "mega-menu show";
   }
-})
-links.addEventListener('mouseover', function (event) {
-  if (event.target.className === 'nav-links') {
+  else{
     megaMenu.className = "mega-menu hide";
   }
 })
+
 mega.addEventListener('mouseout', function(event){
   megaMenu.className = "mega-menu hide";
-  megaMenu.style.display = 'none';
 })
 mega.addEventListener('mouseover', function (event) {
   megaMenu.className = "mega-menu show";
   megaMenu.style.display = 'flex';
 })
+
 links.addEventListener('click', function (event) {
   if (event.target === cartIcon) {
     cart.style.display = 'flex';

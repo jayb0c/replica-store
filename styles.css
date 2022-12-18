@@ -1,6 +1,7 @@
 html{
   scroll-behavior: smooth;
   box-sizing: border-box;
+  overflow: auto;
 }
 a{
   text-decoration: unset;
@@ -15,7 +16,7 @@ a{
   height: 100%;
 }
 body{
-  overflow: auto;
+  overflow: hidden;
   height: 100%;
   overscroll-behavior: none;
   margin: 0;
@@ -95,7 +96,9 @@ footer{
 }
 .nav-links-container {
   display: flex;
+  align-items: center;
   width: 45%;
+  height: 100%;
 }
 .hamburger{
   display: none;
@@ -105,6 +108,7 @@ footer{
 .nav-links{
   display: flex;
   width: 100%;
+  height: 100%;
   justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
@@ -115,9 +119,15 @@ footer{
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: black;
   user-select: none;
+  margin: 0;
+  align-items: center;
 }
 .nav-links > li{
   padding: 0 5px;
+  height: 100%;
+  align-items: center;
+  display: flex;
+
 }
 .nav-links>li:hover{
   color: #4EBF8B;
@@ -201,7 +211,7 @@ footer{
 /*FEATURED COLLECTION*/
 .featured-collection-section {
   display: flex;
-  height: 400px;
+  height: 350px;
   width: 100%;
   margin-top: 100px;
   margin-bottom: 100px;
@@ -260,13 +270,14 @@ animation: scroll-in linear .3s 1;
 }
 .slide{
   display: flex;
-  margin: 0 2% 0 0;
-  min-width: 23%;
-  width: 23%;
+  margin: 0 1.2% 0 0;
+  min-width: 23.8%;
+  width: 23.8%;
   height: 80%;
   background-image: url('#');
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   position: relative;
   animation: fadeInAnimation ease 2s;
   animation-iteration-count: 1;
@@ -329,7 +340,7 @@ animation: scroll-in linear .3s 1;
 .copy-block-container .copy-block {
   display: flex;
   justify-content: center;
-  width: 60%;
+  width: 80%;
   height: 100%;
   flex-direction: column;
 }
@@ -341,22 +352,23 @@ animation: scroll-in linear .3s 1;
   width: 100%;
   height: 50vh;
   padding: 40px 0px;
-  position: fixed;
+  position: sticky;
   top: 80px;
-  z-index: 2;
+  z-index: 4;
   display: none;
   justify-content: center;
   align-items: center;
 }
 .show {
   opacity: 1;
-  transition: opacity 500ms;
+  transition: opacity 250ms;
   display: flex;
 }
 
 .hide {
+  display: none !important;
   opacity: 0;
-  transition: opacity 500ms;
+  transition: opacity 250ms;
 }
 .mega-link{
   text-decoration: none;
@@ -627,7 +639,7 @@ animation: scroll-in linear .3s 1;
 /*BELOW 100px*/
 @media only screen and (max-width: 1104px){
   .copy-header{
-    font-size: 40px;
+    font-size: 35px;
   }
   .image-banner-section{
     flex-direction: column-reverse;
@@ -650,8 +662,8 @@ animation: scroll-in linear .3s 1;
 }
 .featured-collection-section{
   height: 300px;
-  margin-top: 140px;
-  margin-bottom: 140px;
+  margin-top: 120px;
+  margin-bottom: 120px;
 }
 .featured-product-section{
   height: 900px;
@@ -677,11 +689,12 @@ animation: scroll-in linear .3s 1;
   text-align:center;
 }
 .copy-block-container .copy-header{
+  margin-top: 20px;
   text-align: center;
 }
 footer{
   margin-top: 80px;
-  padding: 40px 40px;
+  padding: 20px 40px;
   height: 100%;
   flex-direction: column;
 }
@@ -705,7 +718,7 @@ footer{
   font-size: 16px;
 }
 .button, .button2{
-  height: 60px;
+  height: 40px;
 }
 .email{
   width: 100%;
@@ -719,33 +732,39 @@ footer{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 .nav-links-container{
   display: none;
+}
+.logo{
+  font-size: 30px;
+}
+.nav-bar{
+  height: 60px;
 }
 }
 
 @media only screen and (max-width: 600px) {
 .slide{
-  margin: 0 2% 0 0;
-  width: 98%;
-  min-width: 98%;
+  margin: 0 1.2% 0 0;
+  width: 98.8%;
+  min-width: 98.8%;
 }
 }
 @media only screen and (min-width: 600px) and (max-width:1000px) {
   .slide {
-    margin: 0 2% 0 0;
-    width: 48%;
-    min-width: 48%;
+    margin: 0 1.2% 0 0;
+    width: 48.8%;
+    min-width: 48.8%;
   }
 }
 @media only screen and (min-width: 1000px) and (max-width:1500px) {
   .slide {
-    margin: 0 2% 0 0;
-    width: calc(100% / 3 - 2%);
-    min-width: calc(100% / 3 - 2%);
+    margin: 0 1.2% 0 0;
+    width: calc(100% / 3 - 1.2%);
+    min-width: calc(100% / 3 - 1.2%);
   }
 
 
