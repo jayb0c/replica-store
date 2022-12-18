@@ -81,6 +81,11 @@ footer{
   display: flex;
   width: 45%;
 }
+.hamburger{
+  display: none;
+  width: 40%;
+  height: 100%;
+}
 .nav-links{
   display: flex;
   width: 100%;
@@ -589,11 +594,11 @@ footer{
   }
 .image-banner-section .copy-block-container{
     width: 100%;
-    height: 50%;
+    height: 100%;
   }
 .image-banner-section .image-block{
   width: 100%;
-  height: 50%;
+  height: 100%;
 }
 .see-it-tile{
   margin-bottom: 40px;
@@ -614,11 +619,11 @@ footer{
 }
 .featured-product-section .image-block{
   width: 100%;
-  height: 50%;
+  height: 100%;
 }
 .featured-product-section .copy-block-container {
   width: 100%;
-  height: 50%;
+  height: 100%;
 }
 .see-it-section{
   height: 100%;
@@ -639,6 +644,28 @@ footer{
 }
 footer{
   margin-top: 80px;
+  padding: 40px 40px;
+  height: 100%;
+  flex-direction: column;
+}
+.footer-half1{
+  width: 100%;
+}
+.email-box{
+  width: 100%;
+}
+.footer-half2 {
+  width: 100%;
+  margin-top: 20px;
+}
+.menu-copy{
+  line-height: 2em;
+}
+.mega-category{
+  font-size: 20px;
+}
+.mega-link{
+  font-size: 16px;
 }
 .button, .button2{
   height: 60px;
@@ -647,6 +674,21 @@ footer{
   width: 100%;
   height: 35px;
   touch-action: manipulation;
+}
+.nav-links{
+  display: none;
+}
+.hamburger{
+  display: flex;
+  background-image: url('./images/bars-solid\ \(1\).svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+}
+.nav-links-container{
+  display: none;
 }
 }
 
