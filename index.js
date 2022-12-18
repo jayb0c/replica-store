@@ -53,14 +53,15 @@ function scrollCarousel (carousel, num){
    // console.log('mid', middles.scrollWidth);
 
     if (newSet > middles.scrollWidth - child){
-      console.log('now');
-      middles.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-      });
+      middles.classList.add('wrap1');
+      middles.scrollTo(0,0);
+      setTimeout(function () {
+        middles.classList.add('wrap2');
+      }, 750);
       addON = 0;
     } else{
+      middles.classList.remove('wrap2');
+      middles.classList.remove('wrap1');
       if (event.target.className === 'bookend-r') {
         event.target.previousElementSibling.scrollTo({
           top: 0,

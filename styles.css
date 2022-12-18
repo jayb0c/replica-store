@@ -216,6 +216,7 @@ footer{
   height: 100%;
   width: 40px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 3;
 }
 .bookend-l {
   display: flex;
@@ -225,6 +226,7 @@ footer{
   height: 100%;
   width: 40px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 3;
 }
 
 .featured-collection-section .middle{
@@ -241,6 +243,12 @@ footer{
 .featured-collection-section .middle::-webkit-scrollbar {
   display: none;
   /* Safari and Chrome */
+}
+.wrap1{
+animation: scroll-out linear 1s 1;
+}
+.wrap2{
+animation: scroll-in linear .5s 1;
 }
 .slide{
   display: flex;
@@ -737,5 +745,24 @@ footer{
 
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes scroll-out {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+@keyframes scroll-in {
+  0% {
+    transform: translateX(calc(250px * 7));
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
