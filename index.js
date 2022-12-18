@@ -38,34 +38,47 @@ cart.addEventListener('click', function (event){
 const first = document.getElementById('collectionFirst');
 const second = document.getElementById('collectionSecond');
 
-scrollCarousel(first);
-scrollCarousel(second);
-function scrollCarousel (carousel){
-
+scrollCarousel(first, '1');
+scrollCarousel(second, '2');
+function scrollCarousel (carousel, num){
   var addON = 0;
-  var middles = document.getElementById('collection1');
-
+  var middles = document.getElementById('collection' + num);
   carousel.addEventListener('click', function (event) {
     let fullSet = middles.scrollWidth;
     let middleSet = middles.offsetWidth;
     let newSet = middleSet + addON;
+    let child = middles.firstElementChild.offsetWidth;
 
-    if (event.target.className === 'bookend-r') {
-      event.target.previousElementSibling.scrollTo({
-        top: 0,
-        left: newSet,
-        behavior: 'smooth'
-      });
-      if (newSet <= middles.scrollWidth) { addON = newSet;};
-    }
-    else if (event.target.className === 'bookend-l') {
-      addON = 0;
-      event.target.nextElementSibling.scrollTo({
+    //console.log('new', newSet);
+   // console.log('mid', middles.scrollWidth);
+
+    if (newSet > middles.scrollWidth - child){
+      console.log('now');
+      middles.scrollTo({
         top: 0,
         left: 0,
         behavior: 'smooth'
       });
+      addON = 0;
+    } else{
+      if (event.target.className === 'bookend-r') {
+        event.target.previousElementSibling.scrollTo({
+          top: 0,
+          left: newSet,
+          behavior: 'smooth'
+        });
+        if (newSet <= middles.scrollWidth) { addON = newSet; };
+      }
+      else if (event.target.className === 'bookend-l') {
+        addON = 0;
+        event.target.nextElementSibling.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        });
+      }
     }
+
   });
 }
 

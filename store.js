@@ -40,7 +40,7 @@ fetch('https://api.escuelajs.co/api/v1/products')
         collection1.appendChild(prod);
       }
     }
-    for (let i = 11; i < 21; i++) {
+    for (let i = 11; i < 22; i++) {
       if (newData[i].images != '') {
       let prod = document.createElement('div');
       prod.className = 'slide';
