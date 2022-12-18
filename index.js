@@ -46,6 +46,7 @@ function scrollCarousel (carousel){
   var middles = document.getElementById('collection1');
 
   carousel.addEventListener('click', function (event) {
+    let fullSet = middles.scrollWidth;
     let middleSet = middles.offsetWidth;
     let newSet = middleSet + addON;
 
@@ -55,7 +56,7 @@ function scrollCarousel (carousel){
         left: newSet,
         behavior: 'smooth'
       });
-      if (newSet <= middles.scrollWidth) { addON = newSet };
+      if (newSet <= middles.scrollWidth) { addON = newSet;};
     }
     else if (event.target.className === 'bookend-l') {
       addON = 0;
