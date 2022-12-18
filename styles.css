@@ -610,6 +610,7 @@ footer{
   display: none;
 }
 .featured-collection-section{
+  height: 300px;
   margin-top: 140px;
   margin-bottom: 140px;
 }
@@ -638,9 +639,6 @@ footer{
 }
 .copy-block-container .copy-header{
   text-align: center;
-}
-.bookend-l, .bookend-r{
-  width: 80px;
 }
 footer{
   margin-top: 80px;
