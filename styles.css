@@ -598,4 +598,10 @@ footer{
 .featured-collection-section{
   height: 350px;
 }
+.see-it-section{
+  height: 100%;
+}
+.see-it-tile{
+  flex-basis: 70%;
+}
 }
