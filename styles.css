@@ -566,3 +566,32 @@ footer{
   cursor: pointer;
   color: darkgray;
 }
+
+/*BELOW 100px*/
+@media only screen and (max-width: 1104px){
+  .copy-header{
+    font-size: 30px;
+  }
+  .image-banner-section{
+    flex-direction: column-reverse;
+    justify-content: end;
+    height: 900px;
+  }
+.image-banner-section .copy-block-container{
+    width: 100%;
+    height: 50%;
+  }
+.image-banner-section .image-block{
+  width: 100%;
+  height: 50%;
+}
+.see-it-tile{
+      margin-bottom: 40px;
+}
+.see-it-section{
+  height: 900px;
+}
+.reviews-section{
+  display: none;
+}
+}
