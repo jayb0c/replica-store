@@ -231,6 +231,10 @@ footer{
   background-size: cover;
   position: relative;
   border-radius: 5px;
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
 }
 .slide-cover{
   display: flex;
@@ -352,6 +356,9 @@ footer{
   align-items: center;
   height: 100%;
   width: 50%;
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 .mega-menu .menu-images .featured-image1{
   display: flex;
@@ -631,4 +638,16 @@ footer{
 footer{
   margin-top: 80px;
 }
+}
+
+
+/* ANIMATION */
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
