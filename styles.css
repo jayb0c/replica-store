@@ -2,6 +2,18 @@ html{
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
+a{
+  text-decoration: unset;
+  color: inherit;
+}
+.see-it-tile a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
 body{
   overflow: auto;
   height: 100%;
@@ -242,6 +254,7 @@ footer{
   animation: fadeInAnimation ease 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  aspect-ratio: 1 / 1;
 }
 .slide-cover{
   display: flex;
@@ -426,7 +439,7 @@ footer{
   flex-direction: column;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  width: 400px;
+  width: 500px;
   height: 100vh;
   position: fixed;
   top:0;
@@ -551,8 +564,10 @@ footer{
 }
 .email{
   width: 90%;
-  height: 26px;
-  font-size: 18px;
+  height: 35px;
+  padding-left: 5px;
+  font-size: 20px;
+  touch-action: manipulation;
   border-radius: 5px;
   border: none;
   background-color: gainsboro;
@@ -675,8 +690,6 @@ footer{
 }
 .email{
   width: 100%;
-  height: 35px;
-  touch-action: manipulation;
 }
 .nav-links{
   display: none;
@@ -695,13 +708,13 @@ footer{
 }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
 .slide{
   width: 100%;
   min-width: 100%;
 }
 }
-@media only screen and (min-width: 450px) and (max-width:1000px) {
+@media only screen and (min-width: 600px) and (max-width:1000px) {
   .slide {
     width: 50%;
     min-width: 50%;
