@@ -439,7 +439,7 @@ footer{
   flex-direction: column;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  width: 500px;
+  width: 400px;
   height: 100vh;
   position: fixed;
   top:0;
@@ -571,6 +571,11 @@ footer{
   border-radius: 5px;
   border: none;
   background-color: gainsboro;
+  outline-color: #D95829;
+  max-width: 400px;
+}
+.email:focus{
+  background-color: white;
 }
 .email-label{
   font-size: 20px;
@@ -725,7 +730,6 @@ footer{
     width: calc(100% / 3);
     min-width: calc(100% / 3);
   }
-}
 
 
 /* ANIMATION */
