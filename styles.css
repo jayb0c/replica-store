@@ -301,13 +301,14 @@ footer{
   position: fixed;
   top: 80px;
   z-index: 2;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
 .show {
   opacity: 1;
   transition: opacity 500ms;
+  display: flex;
 }
 
 .hide {
@@ -570,7 +571,7 @@ footer{
 /*BELOW 100px*/
 @media only screen and (max-width: 1104px){
   .copy-header{
-    font-size: 30px;
+    font-size: 40px;
   }
   .image-banner-section{
     flex-direction: column-reverse;
@@ -586,12 +587,15 @@ footer{
   height: 50%;
 }
 .see-it-tile{
-      margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 .see-it-section{
   height: 900px;
 }
 .reviews-section{
   display: none;
+}
+.featured-collection-section{
+  height: 350px;
 }
 }
