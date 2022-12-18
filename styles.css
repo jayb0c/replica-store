@@ -596,12 +596,27 @@ footer{
   display: none;
 }
 .featured-collection-section{
-  height: 350px;
+  margin-top: 140px;
+  margin-bottom: 140px;
 }
 .see-it-section{
   height: 100%;
 }
 .see-it-tile{
-  flex-basis: 70%;
+  flex-basis: 90%;
+  border-radius: 10px;
+  margin-bottom: 60px;
+}
+.copy-block-container .copy-block{
+  text-align:center;
+}
+.copy-block-container .copy-header{
+  text-align: center;
+}
+.bookend-l, .bookend-r{
+  width: 80px;
+}
+footer{
+  margin-top: 80px;
 }
 }
