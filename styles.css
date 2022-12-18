@@ -88,7 +88,7 @@ footer{
   position: sticky;
   top: 0px;
   height: 80px;
-  z-index: 3;
+  z-index: 5;
 }
 .nav-logo-container{
   display: flex;
@@ -216,10 +216,16 @@ footer{
   height: 100%;
   width: 40px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  z-index: 3;
+  z-index: 2;
+}
+.bookend-l:hover{
+  cursor: pointer;
+}
+.bookend-r:hover {
+  cursor: pointer;
 }
 .bookend-l {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   background-color: white;
@@ -245,10 +251,10 @@ footer{
   /* Safari and Chrome */
 }
 .wrap1{
-animation: scroll-out linear 1s 1;
+animation: scroll-out linear .3s 1;
 }
 .wrap2{
-animation: scroll-in linear .5s 1;
+animation: scroll-in linear .3s 1;
 }
 .slide{
   display: flex;
@@ -452,7 +458,7 @@ animation: scroll-in linear .5s 1;
   position: fixed;
   top:0;
   right: 0;
-  z-index: 5;
+  z-index: 6;
 }
 .cart-icon{
   height: 30px;
@@ -751,18 +757,22 @@ footer{
 @keyframes scroll-out {
   0% {
     transform: translateX(0);
+    opacity: 1;
   }
 
   100% {
     transform: translateX(calc(-250px * 7));
+    opacity: 0;
   }
 }
 @keyframes scroll-in {
   0% {
     transform: translateX(calc(250px * 7));
+    opacity: 0;
   }
 
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }

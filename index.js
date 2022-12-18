@@ -43,43 +43,51 @@ scrollCarousel(second, '2');
 function scrollCarousel (carousel, num){
   var addON = 0;
   var middles = document.getElementById('collection' + num);
+
   carousel.addEventListener('click', function (event) {
     let fullSet = middles.scrollWidth;
     let middleSet = middles.offsetWidth;
-    let newSet = middleSet + addON;
+    let rightSet = middleSet + addON;
+    let leftSet = rightSet - middleSet;
     let child = middles.firstElementChild.offsetWidth;
+    let save = 0;
 
-    //console.log('new', newSet);
-   // console.log('mid', middles.scrollWidth);
-
-    if (newSet > middles.scrollWidth - child){
+    if (rightSet > fullSet - child){
       middles.classList.add('wrap1');
       middles.scrollTo(0,0);
       setTimeout(function () {
         middles.classList.add('wrap2');
-      }, 750);
+      }, 200);
       addON = 0;
-    } else{
+    }
+    else{
       middles.classList.remove('wrap2');
       middles.classList.remove('wrap1');
       if (event.target.className === 'bookend-r') {
         event.target.previousElementSibling.scrollTo({
           top: 0,
-          left: newSet,
+          left: rightSet,
           behavior: 'smooth'
         });
-        if (newSet <= middles.scrollWidth) { addON = newSet; };
+        if (rightSet <= middles.scrollWidth) { addON = rightSet; };
       }
-      else if (event.target.className === 'bookend-l') {
-        addON = 0;
-        event.target.nextElementSibling.scrollTo({
-          top: 0,
-          left: 0,
-          behavior: 'smooth'
-        });
+      if (event.target.className === 'bookend-l') {
+        if (addON == 0) {
+          middles.classList.add('wrap2');
+          middles.scrollTo(fullSet, 0);
+          setTimeout(function () {
+            middles.classList.add('wrap1');
+          }, 200);
+        } else{
+          event.target.nextElementSibling.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
+          addON = 0;
+        }
       }
     }
-
   });
 }
 
