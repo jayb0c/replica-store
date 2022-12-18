@@ -25,7 +25,7 @@ fetch('https://api.escuelajs.co/api/v1/products')
 
 //Basically, the API is called and the first carousel gets the first 10 and the second carousel gets the second 10. A new carousel tile is created for each item.
 //PRODUCT CAROUSELS HANDLED HERE
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 11; i++) {
       if (newData[i].images != '') {
       let prod = document.createElement('div');
       prod.className = 'slide';
@@ -40,7 +40,7 @@ fetch('https://api.escuelajs.co/api/v1/products')
         collection1.appendChild(prod);
       }
     }
-    for (let i = 11; i < 20; i++) {
+    for (let i = 11; i < 21; i++) {
       if (newData[i].images != '') {
       let prod = document.createElement('div');
       prod.className = 'slide';
@@ -71,7 +71,6 @@ fetch('https://api.escuelajs.co/api/v1/products')
         }
       }
 
-      console.log(thisData);
       let featuredImage = document.getElementById('image-block');
       let featuredCopy = document.getElementById('copy-block');
 

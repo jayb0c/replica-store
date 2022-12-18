@@ -1,5 +1,6 @@
 html{
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 body{
   overflow: auto;
@@ -231,15 +232,13 @@ footer{
 }
 .slide{
   display: flex;
-  min-width: 250px;
-  width: 250px;
-  margin: 0 20px;
+  min-width: 25%;
+  width: 25%;
   height: 80%;
   background-image: url('#');
   background-position: center;
   background-size: cover;
   position: relative;
-  border-radius: 5px;
   animation: fadeInAnimation ease 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -251,7 +250,6 @@ footer{
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 5px;
   color: rgba(0, 0, 0, 0);
   font-size: 32px;
   justify-content: center;
@@ -695,6 +693,25 @@ footer{
 .nav-links-container{
   display: none;
 }
+}
+
+@media only screen and (max-width: 450px) {
+.slide{
+  width: 100%;
+  min-width: 100%;
+}
+}
+@media only screen and (min-width: 450px) and (max-width:1000px) {
+  .slide {
+    width: 50%;
+    min-width: 50%;
+  }
+}
+@media only screen and (min-width: 1000px) and (max-width:1500px) {
+  .slide {
+    width: calc(100% / 3);
+    min-width: calc(100% / 3);
+  }
 }
 
 

@@ -5,7 +5,6 @@ var cart = document.getElementById('cart');
 var cartIcon = document.getElementById('cartIcon');
 var cartX = document.getElementById('cartX');
 
-console.log(cart);
 links.addEventListener('mouseover', function(event){
   if (event.target.className === 'link') {
     megaMenu.style.display = 'flex';
@@ -36,6 +35,44 @@ cart.addEventListener('click', function (event){
   }
 })
 
+const first = document.getElementById('collectionFirst');
+const second = document.getElementById('collectionSecond');
+
+scrollCarousel(first);
+scrollCarousel(second);
+function scrollCarousel (carousel){
+
+  var addON = 0;
+  var middles = document.getElementById('collection1');
+
+  carousel.addEventListener('click', function (event) {
+    let middleSet = middles.offsetWidth;
+    let newSet = middleSet + addON;
+
+    if (event.target.className === 'bookend-r') {
+      event.target.previousElementSibling.scrollTo({
+        top: 0,
+        left: newSet,
+        behavior: 'smooth'
+      });
+      if (newSet <= middles.scrollWidth) { addON = newSet };
+    }
+    else if (event.target.className === 'bookend-l') {
+      addON = 0;
+      event.target.nextElementSibling.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+  });
+}
+
+
+
+
+
+/* DEACTIVATED CODE
 //Carousel events. Finds the page width to ensure that the carousel never overscrolls.
 var main = document.getElementById('collection1');
 var currentScroll = 300;
@@ -59,9 +96,7 @@ document.addEventListener('click', function(event){
       });
     }
 })
-
 //Logo toggles between the 2 store colors on each hover.
-/*
 var logo = document.getElementById('logo');
 var logoToggle = false;
 logo.addEventListener('mouseover', function(event){
