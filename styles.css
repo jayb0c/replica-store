@@ -379,7 +379,9 @@ animation: scroll-in linear .3s 1;
   transition: opacity 250ms;
   display: flex;
 }
-
+.no-wrap{
+  flex-wrap:nowrap;
+}
 .hide {
   display: none !important;
   opacity: 0;
@@ -684,6 +686,12 @@ animation: scroll-in linear .3s 1;
     width: 75%;
     min-height: 20vh;
     max-height: 20vh;
+  }
+  .footer-half2 .menu-copy {
+  width: 75%;
+  min-height: 20vh;
+  max-height: 20vh;
+  flex-wrap: nowrap
   }
   .menu-images{
     width: 75%;
