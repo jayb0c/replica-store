@@ -103,14 +103,17 @@ function scrollCarousel (carousel, num){
 const lines = document.getElementById('mobile-menu');
 const mobileMenu = document.getElementById('mega-mobile');
 const mobileX = document.getElementById('mobile-x');
-console.log(mobileX);
+const page = document.getElementsByTagName('body')[0];
 
 lines.addEventListener('click', function(){
   mobileMenu.style.display = 'flex';
+  page.style.position = 'fixed';
+  page.style.top = 0;
 })
 mobileX.addEventListener('click', function(){
-  console.log('hi');
   mobileMenu.style.display = 'none';
+  page.style.position = 'relative';
+  page.style.top = 'none';
 })
 
 /* DEACTIVATED CODE
