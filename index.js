@@ -4,12 +4,14 @@ var links = document.getElementById('nav');
 var cart = document.getElementById('cart');
 var cartIcon = document.getElementById('cartIcon');
 var cartX = document.getElementById('cartX');
+var mobile = false;
 
 if (window.scrollY > (megaMenu.offsetHeight + megaMenu.offsetTop)) {
   megaMenu.className = "mega-menu hide";
 }
 links.addEventListener('mouseover', function(event){
-  if (event.target.className === 'link' || event.target === megaMenu) {
+  if(mobile === true){ return; }
+  if (event.target.className === 'link desk-only' || event.target === megaMenu) {
     megaMenu.style.display = 'flex';
     megaMenu.className = "mega-menu show";
   }
@@ -73,6 +75,8 @@ function scrollCarousel (carousel, num){
         });
         if (rightSet <= middles.scrollWidth) { addON = rightSet; };
       }
+
+
       /*
       if (event.target.className === 'bookend-l') {
         if (addON == 0) {
@@ -95,9 +99,19 @@ function scrollCarousel (carousel, num){
   });
 }
 
+/* MOBILE MENU OPENING */
+const lines = document.getElementById('mobile-menu');
+const mobileMenu = document.getElementById('mega-mobile');
+const mobileX = document.getElementById('mobile-x');
+console.log(mobileX);
 
-
-
+lines.addEventListener('click', function(){
+  mobileMenu.style.display = 'flex';
+})
+mobileX.addEventListener('click', function(){
+  console.log('hi');
+  mobileMenu.style.display = 'none';
+})
 
 /* DEACTIVATED CODE
 //Carousel events. Finds the page width to ensure that the carousel never overscrolls.

@@ -17,17 +17,46 @@
       <div class="nav-logo-container">
         <h1 class="logo" id="logo"><a href="https://jayb0c.github.io/replica-store">REPLICA</a></h1>
       </div>
-      <div class="hamburger no-zoom"></div>
       <div class="nav-links-container" id="nav">
         <ul class="nav-links">
-          <li class="link">Shop</li>
-          <li class="none">Contact</li>
-          <li class="none">Account</li>
+          <li class="link desk-only">Shop</li>
+          <li class="none desk-only">Contact</li>
+          <li class="none desk-only">Account</li>
+          <li class="mobile-only" id="mobile-menu"><div class="hamburger no-zoom"></div></li>
           <li><img id="cartIcon" class="cart-icon" src="./images/noun-cart-2269221.svg" alt="cart icon"></li>
         </ul>
       </div>
     </div>
     <div class="mega-menu hide" id="mega">
+      <div class="menu-copy">
+        <h4><a href="#" class="mega-category">All Clothing</a></h4>
+        <h4><a href="#" class="mega-link">Outerwear</a></h4>
+        <h4><a href="#" class="mega-link">Shirts</a></h4>
+        <h4><a href="#" class="mega-link">Pants</a></h4>
+        <h4><a href="#" class="mega-link">Accessories</a></h4>
+      </div>
+      <div class="menu-copy">
+        <h4><a href="#" class="mega-category">All Shoes</a></h4>
+        <h4><a href="#" class="mega-link">Running</a></h4>
+        <h4><a href="#" class="mega-link">Cross Training</a></h4>
+        <h4><a href="#" class="mega-link">Sport</a></h4>
+        <h4><a href="#" class="mega-link">Casual</a></h4>
+      </div>
+      <div class="menu-images">
+        <div class="featured-image1">
+          <div class="overlay">
+            <h2>All</h2>
+          </div>
+        </div>
+        <div class="featured-image2">
+          <div class="overlay">
+            <h2>Best Sellers</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mega-menu-mobile" id="mega-mobile">
+      <img id="mobile-x" class="cart-x" src="./images/noun-x-2222032.svg" alt="close cart">
       <div class="menu-copy">
         <h4><a href="#" class="mega-category">All Clothing</a></h4>
         <h4><a href="#" class="mega-link">Outerwear</a></h4>
@@ -157,6 +186,5 @@
     </footer>
     <script src="store.js"></script>
     <script src="index.js"></script>
-    <script src="back.js"></script>
   </body>
 </html>
