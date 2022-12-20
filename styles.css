@@ -763,11 +763,13 @@ animation: scroll-in linear .3s 1;
     width: 100%;
     margin: 20px 0 0 0;
     height: 150px;
+    background-size: contain;
   }
   .featured-image2{
     width: 100%;
     margin: 20px 0 0 0;
     height: 150px;
+    background-size: contain;
   }
   .copy-header{
     font-size: 35px;
