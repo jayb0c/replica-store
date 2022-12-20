@@ -821,6 +821,7 @@ animation: scroll-in linear .3s 1;
 }
 .copy-block-container .copy-block{
   text-align:center;
+  align-items: center;
 }
 .copy-block-container .copy-header{
   margin-top: 20px;
@@ -856,6 +857,7 @@ footer{
 }
 .button, .button2{
   height: 40px;
+  max-width: 400px;
 }
 .email{
   width: 100%;
