@@ -498,10 +498,11 @@ p {
 /* MISC STYLES */
 .no-zoom{
   touch-action: manipulation;
-}.show {
+}
+.show {
+  display: flex;
   opacity: 1;
   transition: opacity 250ms;
-  display: flex;
 }
 .no-wrap {
   flex-wrap: nowrap;
@@ -606,11 +607,11 @@ p {
 }
 .wrap1{
 animation: scroll-out linear .3s 1;
--webkit-animation: scroll-out .3s 1;
+-webkit-animation: scroll-out .4s 1;
 }
 .wrap2{
 animation: scroll-in linear .3s 1;
--webkit-animation: scroll-in .3s 1;
+-webkit-animation: scroll-in .4s 1;
 }
 .slide{
   display: flex;
